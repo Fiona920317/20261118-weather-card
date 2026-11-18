@@ -1,0 +1,130 @@
+/* 初始化 */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  list-style: none;
+  text-decoration: none;
+}
+/* container通用設定  */
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+
+  @media (max-width: 980px) {
+    max-width: none;
+    width: 100%;
+  }
+}
+/* 按鈕通用設定 */
+.btn {
+  /* 初始化按鈕樣式 */
+  border: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  /* 客製化按鈕樣式 */
+  box-shadow: none;
+  box-shadow: 0 0 5px rgb(181, 181, 181);
+  cursor: pointer;
+
+  background-color: rgb(100, 200, 255);
+  border-radius: 10px;
+
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  &:hover {
+    box-shadow: 0 0 10px gray;
+    background-color: rgb(100, 180, 255);
+  }
+}
+/* 圖片通用設定 */
+.img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/***************************************************************/
+:root {
+  font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e9d2f4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.web-title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.switch-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+  .btn {
+    background-color: #c1b098;
+  }
+}
+.card-group {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  place-content: center;
+  gap: 20px;
+  .card {
+    background-color: #c1b098;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .card-content {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #39393a;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    color: white;
+  }
+  .city-detail {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 980px) {
+    grid-template-columns: repeat(2, 300px);
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
